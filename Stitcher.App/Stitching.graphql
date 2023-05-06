@@ -1,0 +1,4 @@
+extend type Transaction {
+    customer: Customer! @delegate( schema: "Customers", path: "customer(customerId: $fields:customerId)")
+    product: Product! @delegate( schema: "Products", path: "product(productId: $fields:productId)")
+}
