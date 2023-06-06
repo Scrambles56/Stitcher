@@ -65,7 +65,7 @@ public class ProductRepository
 public class Product
 {
     public int ProductId { get; set; }
-    public string Name { get; set; }
+    [GraphQLType(typeof(NonEmptyStringType))] public string Name { get; set; }
 
     public Product(int productId, string name)
     {
